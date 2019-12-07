@@ -2,6 +2,18 @@
 
 Go binding for [stb_image.h][].
 
+## Usage
+
+Load and `image.RGBA` from some path on disk.
+
+```go
+import "github.com/neilpa/go-stbi"
+
+image, err := stbi.Load("path/to/image.jpeg")
+// ...
+```
+
+
 ## Licence
 
 This code is released into the public domain.
