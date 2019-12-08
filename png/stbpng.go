@@ -9,7 +9,8 @@ import (
 	"github.com/neilpa/go-stbi"
 )
 
-const pngHeader = "\x89PNG\r\n\x1a\n"
+// Header is the magic string at the start of a PNG file.
+const Header = "\x89PNG\r\n\x1a\n"
 
 // Decode reads a PNG image from r and returns an image.RGBA.
 func Decode(r io.Reader) (image.Image, error) {
@@ -25,5 +26,5 @@ func DecodeConfig(r io.Reader) (image.Config, error) {
 }
 
 func init() {
-	image.RegisterFormat("png", pngHeader, Decode, DecodeConfig)
+	image.RegisterFormat("png", Header, Decode, DecodeConfig)
 }
