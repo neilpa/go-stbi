@@ -4,7 +4,7 @@ Go binding for [stb_image.h][].
 
 ## Usage
 
-Load and `image.RGBA` from some path on disk.
+Load an `image.RGBA` from some path on disk.
 
 ```go
 import "github.com/neilpa/go-stbi"
@@ -12,6 +12,13 @@ import "github.com/neilpa/go-stbi"
 image, err := stbi.Load("path/to/image.jpeg")
 // ...
 ```
+
+There are also format specific sub-packages that register decoders for use
+with the standard `image.Decode` and `image.DecodeConfig` methods.
+
+* bmp
+* jpeg
+* png
 
 
 ## Licence
