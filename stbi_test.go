@@ -1,11 +1,14 @@
-package bmp_test
+package stbi_test
 
 import (
+	"fmt"
 	"image"
 	"os"
 	"testing"
 
 	_ "github.com/neilpa/go-stbi/bmp"
+	_ "github.com/neilpa/go-stbi/jpeg"
+	_ "github.com/neilpa/go-stbi/png"
 )
 
 
@@ -13,19 +16,22 @@ var tests = []struct{
 	path string
 	width, height int
 } {
-	{ "../testdata/red.16x16.bmp", 16, 16 },
+	{ "testdata/red.16x16.bmp", 16, 16 },
+	{ "testdata/red.16x16.jpg", 16, 16 },
+	{ "testdata/red.16x16.png", 16, 16 },
 }
 
 func TestDecode(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.path, func(t *testing.T) {
+			fmt.Println("testing", tt.path)
 			f, err := os.Open(tt.path)
 			if err != nil {
-				t.Error(err)
+				t.Fatal(err)
 			}
 			img, _, err := image.Decode(f)
 			if err != nil {
-				t.Error(err)
+				t.Fatal(err)
 			}
 			s := img.Bounds().Size()
 			if s.X != tt.width || s.Y != tt.height {
@@ -33,7 +39,7 @@ func TestDecode(t *testing.T) {
 			}
 			rgba, ok := img.(*image.RGBA)
 			if !ok {
-				t.Errorf("format: not RGBA")
+				t.Fatalf("format: not RGBA, %T", img)
 			}
 			p := tt.width * tt.height * 4
 			if len(rgba.Pix) != p {
@@ -60,4 +66,3 @@ func TestDecodeConfig(t *testing.T) {
 		})
 	}
 }
-
