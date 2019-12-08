@@ -51,6 +51,11 @@ func DecodeConfig(r io.Reader) (image.Config, error) {
 		err = ErrInvalid
 	}
 
+	// Negative height means the pixel order is reversed but we want the magnitude
+	// https://en.wikipedia.org/wiki/BMP_file_format#Pixel_array_.28bitmap_data.29
+	if cfg.Height < 0 {
+		cfg.Height = -cfg.Height
+	}
 	return cfg, err
 }
 
