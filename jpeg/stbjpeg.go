@@ -1,4 +1,4 @@
-package stbpng
+package stbjpeg
 
 import (
 	"io"
