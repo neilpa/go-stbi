@@ -16,9 +16,9 @@ var tests = []struct{
 	path string
 	width, height int
 } {
-	{ "testdata/red.16x16.bmp", 16, 16 },
-	{ "testdata/red.16x16.jpg", 16, 16 },
-	{ "testdata/red.16x16.png", 16, 16 },
+	{ "testdata/red.16x8.bmp", 16, 8 },
+	{ "testdata/red.16x8.jpg", 16, 8 },
+	{ "testdata/red.16x8.png", 16, 8 },
 }
 
 func TestDecode(t *testing.T) {
