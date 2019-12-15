@@ -18,6 +18,20 @@ image, err := stbi.Load("path/to/image.jpeg")
 There are also format specific sub-packages that register decoders for use
 with the standard `image.Decode` and `image.DecodeConfig` methods.
 
+```go
+import (
+    "image"
+
+    _ "github.com/neilpa/go-stbi/bmp"
+    _ "github.com/neilpa/go-stbi/jpeg"
+    _ "github.com/neilpa/go-stbi/png"
+)
+
+bmp, _, err := image.Decode("path/to/image.bmp")
+jpg, _, err := image.Decode("path/to/image.jpg")
+png, _, err := image.Decode("path/to/image.png")
+// ...
+```
 * bmp
 * jpeg
 * png
