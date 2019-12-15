@@ -1,3 +1,5 @@
+// Package png provides a PNG decoder via the go bindings for stb_image.h
+// and registers for use with image.Decode and image.DecodeConfig.
 package png // import "neilpa.me/go-stbi/png"
 
 import (

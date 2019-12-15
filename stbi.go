@@ -1,3 +1,7 @@
+// Package stbi provides go bindings for stb_image.h at v2.23
+//
+// See subpackages for format specific codecs for use with image.Decode and
+// image.DecodeConfig.
 package stbi // import "neilpa.me/go-stbi"
 
 import (

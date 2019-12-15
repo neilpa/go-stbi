@@ -1,3 +1,5 @@
+// Package jpeg provides a JPEG decoder via the go bindings for stb_image.h
+// and registers for use with image.Decode and image.DecodeConfig.
 package jpeg // import "neilpa.me/go-stbi/jpeg"
 
 import (

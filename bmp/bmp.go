@@ -1,3 +1,5 @@
+// Package bmp provides a BMP decoder via the go bindings for stb_image.h
+// and registers for use with image.Decode and image.DecodeConfig.
 package bmp // import "neilpa.me/go-stbi/bmp"
 
 import (
