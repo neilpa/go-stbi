@@ -1,6 +1,6 @@
 # go-stbi
 
-![][badge]
+[![][badge]][actions]
 
 Go binding for [stb_image.h][].
 
@@ -32,15 +32,11 @@ jpg, _, err := image.Decode("path/to/image.jpg")
 png, _, err := image.Decode("path/to/image.png")
 // ...
 ```
-* bmp
-* jpeg
-* png
-
 
 ## Licence
 
 This code is released into the public domain.
 
+[actions]: https://github.com/neilpa/go-stbi/actions/
 [badge]: https://github.com/neilpa/go-stbi/workflows/CI/badge.svg
 [stb_image.h]: https://github.com/nothings/stb/blob/f67165c2bb2af3060ecae7d20d6f731173485ad0/stb_image.h
-
