@@ -3,11 +3,18 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-
+  basic:
     runs-on: ubuntu-latest
+
+    env:
+      GOPATH: /home/runner/work/go-stbi
+      GO111MODULE: off
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run the tests
-      run: go test
+      with:
+        path: ./src/github.com/${{ github.repository }}
+    - name: Build
+      run: go build -v ./...
+    - name: Test
+      run: go test ./...
