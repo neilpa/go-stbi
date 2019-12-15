@@ -6,9 +6,9 @@ import (
 	"os"
 	"testing"
 
-	_ "github.com/neilpa/go-stbi/bmp"
-	_ "github.com/neilpa/go-stbi/jpeg"
-	_ "github.com/neilpa/go-stbi/png"
+	_ "neilpa.me/go-stbi/bmp"
+	_ "neilpa.me/go-stbi/jpeg"
+	_ "neilpa.me/go-stbi/png"
 )
 
 

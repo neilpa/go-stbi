@@ -1,4 +1,4 @@
-package stbi
+package stbi // import "neilpa.me/go-stbi"
 
 import (
 	"errors"

@@ -9,7 +9,7 @@ Go binding for [stb_image.h][].
 Load an `image.RGBA` from some path on disk.
 
 ```go
-import "github.com/neilpa/go-stbi"
+import "neilpa.me/go-stbi"
 
 image, err := stbi.Load("path/to/image.jpeg")
 // ...
@@ -22,9 +22,9 @@ with the standard `image.Decode` and `image.DecodeConfig` methods.
 import (
     "image"
 
-    _ "github.com/neilpa/go-stbi/bmp"
-    _ "github.com/neilpa/go-stbi/jpeg"
-    _ "github.com/neilpa/go-stbi/png"
+    _ "neilpa.me/go-stbi/bmp"
+    _ "neilpa.me/go-stbi/jpeg"
+    _ "neilpa.me/go-stbi/png"
 )
 
 bmp, _, err := image.Decode("path/to/image.bmp")

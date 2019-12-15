@@ -1,4 +1,4 @@
-package bmp
+package bmp // import "neilpa.me/go-stbi/bmp"
 
 import (
 	"encoding/binary"
@@ -7,7 +7,7 @@ import (
 	"image"
 	"image/color"
 
-	"github.com/neilpa/go-stbi"
+	"neilpa.me/go-stbi"
 )
 
 // Header is the magic string at the start of a BMP file.
