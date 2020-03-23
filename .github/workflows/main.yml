@@ -1,14 +1,13 @@
 name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   basic:
-    runs-on: ubuntu-latest
-
-    env:
-      GOPATH: /home/runner/work/go-stbi
-      GO111MODULE: off
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v1
