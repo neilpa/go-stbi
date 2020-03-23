@@ -24,7 +24,7 @@ func Decode(r io.Reader) (image.Image, error) {
 }
 
 // DecodeConfig returns the dimensions and an RGBA color model of the JPEG
-// backed by reader. Note this simply wraps the stdlib jpeg.DecodeConfig.
+// backed by reader.
 func DecodeConfig(r io.Reader) (image.Config, error) {
 	cfg := image.Config{ColorModel: color.RGBAModel}
 

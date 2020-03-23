@@ -24,7 +24,7 @@ func Decode(r io.Reader) (image.Image, error) {
 }
 
 // DecodeConfig returns the dimensions and an RGBA color model of the PNG
-// backed by reader. Note this simply wraps the stdlib png.DecodeConfig.
+// backed by reader.
 func DecodeConfig(r io.Reader) (image.Config, error) {
 	cfg := image.Config{ColorModel: color.RGBAModel}
 
@@ -48,7 +48,7 @@ func init() {
 	image.RegisterFormat("png", Header, Decode, DecodeConfig)
 }
 
-// pngHeader is enough to decode up to the widht/height
+// pngHeader is enough to decode up to the width and height.
 type pngHeader struct {
 	Magic [8]byte
 	ChunkSize uint32
