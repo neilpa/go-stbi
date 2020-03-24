@@ -7,6 +7,7 @@ import (
 	"testing"
 
 	_ "neilpa.me/go-stbi/bmp"
+	_ "neilpa.me/go-stbi/gif"
 	_ "neilpa.me/go-stbi/jpeg"
 	_ "neilpa.me/go-stbi/png"
 )
@@ -17,6 +18,7 @@ var tests = []struct{
 	width, height int
 } {
 	{ "testdata/red.16x8.bmp", 16, 8 },
+	{ "testdata/red.16x8.gif", 16, 8 },
 	{ "testdata/red.16x8.jpg", 16, 8 },
 	{ "testdata/red.16x8.png", 16, 8 },
 }

@@ -24,11 +24,13 @@ import (
     "image"
 
     _ "neilpa.me/go-stbi/bmp"
+    _ "neilpa.me/go-stbi/gif"
     _ "neilpa.me/go-stbi/jpeg"
     _ "neilpa.me/go-stbi/png"
 )
 
 bmp, _, err := image.Decode("path/to/image.bmp")
+gif, _, err := image.Decode("path/to/image.gif")
 jpg, _, err := image.Decode("path/to/image.jpg")
 png, _, err := image.Decode("path/to/image.png")
 // ...
